@@ -1,9 +1,11 @@
 <?php
 /*
-class Calculator
+ * class Calculator
 
-simle calculator
-*/
+    simle calculator
+ *
+ * */
+
 class Calculator
 {
     private $firstNumber;
@@ -11,101 +13,98 @@ class Calculator
     private $memory;
 
     
-    public function setFirstNumber($number)
+    public function setFirstNumber ($number)
     {
-       if(is_numeric($number)) {
-
-            $this->firstNumber = $number;
-
-       } else {
-
-            throw new Exception('Not number');
-
+       if (is_numeric($number)) 
+       {
+           $this->firstNumber = $number;
+       } 
+       else 
+       {
+           throw new Exception('Not number');
        }
     }
 
-    public function setSecondNumber($number)
+    public function setSecondNumber ($number)
     {
-        if(is_numeric($number)) {
-
+        if (is_numeric($number)) 
+        {
             $this->secondNumber = $number;
-
-       } else {
-
+        } 
+        else 
+        {
             throw new Exception('Not number');
-
-       }
+        }
     }
 
-    public function getFirstNumber()
+    public function getFirstNumber ()
     {
         return $this->firstNumber;
     }
 
-    public function getSecondNumber()
+    public function getSecondNumber ()
     {
         return $this->secondNumber;
     }
 
-    public function plus()
+    public function plus ()
     {
         return $this->firstNumber + $this->secondNumber;
     }
 
-    public function minus()
+    public function minus ()
     {
         return $this->firstNumber - $this->secondNumber;
     }
 
-    public function multiply()
+    public function multiply ()
     {
         return $this->firstNumber * $this->secondNumber;
     }
 
-    public function division()
+    public function division ()
     {
-        if(0 == $this->secondNumber) {
-
+        if (0 == $this->secondNumber) 
+        {
             throw new Exception('Operation does not of permission');
-
-        } else {
-
+        } 
+        else 
+        {
             return $this->firstNumber / $this->secondNumber;
-
         }
     }
 
-    public function mySqrt($num)
+    public function mySqrt ($num)
     {
         return sqrt($num);
     }
 
-    public function percent()
+    public function percent ()
     {
-       return $this->firstNumber * $this->secondNumber / 100;
+       return $this->firstNumber * $this->secondNumber / PERCENT;
     }
 
-    public function MS($result) 
+    public function MS ($result) 
     {
         $this->memory = $result;
     }
 
-    public function MR() 
+    public function MR () 
     {
         return $this->memory;
     }
 
-    public function MC() 
+    public function MC () 
     {
        unset($this->memory);
     }
 
-    public function MPlus($num) 
+    public function MPlus ($num) 
     {
        return $this->memory += $num;
     }
 
-    public function MMinus($num) 
+    public function MMinus ($num) 
     {
         return $this->memory -= $num;
     }

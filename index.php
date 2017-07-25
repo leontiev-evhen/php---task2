@@ -1,7 +1,11 @@
-<?php 
+<?php
+
+require_once 'config.php';
 require_once 'libs/Calculator.php';
 
-try {
+
+try
+{
     $calculator = new Calculator();
     $calculator->setFirstNumber(33);
     $calculator->setSecondNumber(22);
@@ -19,8 +23,10 @@ try {
     $calculator->MMinus($result);
     $result = $calculator->MR();
 
-} catch(Exception $e) {
-    echo $e->getMessage();
+}
+catch (Exception $e)
+{
+    $e->getMessage();
 }
 
 require_once 'templates/index.php';
