@@ -1,0 +1,14 @@
+body {
+    background: #20a508;
+    color: #fff;
+    font-size: 15px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.col-md-6 {
+    border-bottom: 1px dotted #ccc;
+    padding: 15px;
+}
